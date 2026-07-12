@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Explore School | Royal Public School</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#0b0815;
+color:#fff;
+}
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 8%;
+background:#120b22;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.logo{
+font-size:28px;
+font-weight:bold;
+color:#c86cff;
+}
+
+nav a{
+text-decoration:none;
+color:#fff;
+margin-left:20px;
+transition:.3s;
+}
+
+nav a:hover{
+color:#d68cff;
+}
+
+.hero{
+height:90vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+background:linear-gradient(rgba(10,0,20,.7),rgba(10,0,20,.8)),
+url("https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1500&q=80");
+background-size:cover;
+background-position:center;
+}
+
+.hero h1{
+font-size:60px;
+text-shadow:0 0 25px purple;
+}
+
+.hero p{
+font-size:20px;
+margin-top:20px;
+color:#ddd;
+}
+
+.btn{
+display:inline-block;
+margin-top:30px;
+padding:15px 35px;
+background:#9b27ff;
+border-radius:40px;
+text-decoration:none;
+color:white;
+font-weight:bold;
+transition:.3s;
+cursor:pointer;
+}
+
+.btn:hover{
+background:#b84cff;
+box-shadow:0 0 25px purple;
+}
+
+.section{
+padding:80px 8%;
+}
+
+.title{
+text-align:center;
+font-size:40px;
+color:#cf82ff;
+margin-bottom:50px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+}
+
+.card{
+background:#171224;
+padding:30px;
+border-radius:18px;
+text-align:center;
+cursor:pointer;
+transition:.4s;
+border:1px solid rgba(170,0,255,.3);
+}
+
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 0 25px purple;
+}
+
+.card h2{
+margin-bottom:15px;
+color:#d58cff;
+}
+
+.card p{
+color:#ddd;
+line-height:1.8;
+}
+
+.popup{
+display:none;
+position:fixed;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+background:#181325;
+padding:30px;
+width:90%;
+max-width:500px;
+border-radius:20px;
+box-shadow:0 0 35px purple;
+z-index:9999;
+text-align:center;
+}
+
+.popup h2{
+margin-bottom:15px;
+color:#d98cff;
+}
+
+.popup button{
+margin-top:20px;
+padding:12px 30px;
+border:none;
+background:#9b27ff;
+color:white;
+border-radius:30px;
+cursor:pointer;
+}
+
+footer{
+background:#09060f;
+padding:30px;
+text-align:center;
+margin-top:50px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">GHS School Naiwala</div>
+
+<nav>
+
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="teachers.html">Teachers</a>
+<a href="admission.html">Admission</a>
+<a href="facilities.html">Facilities</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div>
+
+<h1>Explore Our School</h1>
+
+<p>Discover Smart Classrooms, Labs, Library, Sports & Modern Education.</p>
+
+<a class="btn" onclick="showPopup()">Explore Now</a>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="title">Explore Facilities</h2>
+
+<div class="cards">
+
+<div class="card" onclick="showLab()">
+
+<h2>🧪 Science Lab</h2>
+
+<p>Modern Physics, Chemistry and Biology laboratories.</p>
+
+</div>
+
+<div class="card" onclick="showLibrary()">
+
+<h2>📚 Library</h2>
+
+<p>Thousands of educational books and digital resources.</p>
+
+</div>
+
+<div class="card" onclick="showSports()">
+
+<h2>⚽ Sports</h2>
+
+<p>Indoor and outdoor sports with professional coaching.</p>
+
+</div>
+
+</div>
+
+</section>
+
+<div class="popup" id="popup">
+
+<h2 id="title"></h2>
+
+<p id="text"></p>
+
+<button onclick="closePopup()">Close</button>
+
+</div>
+
+<footer>
+
+<h2 style="color:#c86cff;">Royal Public School</h2>
+
+<p>Explore • Learn • Grow</p>
+
+</footer>
+
+<script>
+
+const popup=document.getElementById("popup");
+const title=document.getElementById("title");
+const text=document.getElementById("text");
+
+function showPopup(){
+title.innerHTML="Welcome!";
+text.innerHTML="coming soon.";
+popup.style.display="block";
+}
+
+function showLab(){
+title.innerHTML="Science Laboratory";
+text.innerHTML="coming soon .";
+popup.style.display="block";
+}
+
+function showLibrary(){
+title.innerHTML="Library";
+text.innerHTML="coming soon";
+popup.style.display="block";
+}
+
+function showSports(){
+title.innerHTML="Sports Complex";
+text.innerHTML="coming soon.";
+popup.style.display="block";
+}
+
+function closePopup(){
+popup.style.display="none";
+}
+
+</script>
+
+</body>
+</html>
