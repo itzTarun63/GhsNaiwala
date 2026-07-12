@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Royal Public School</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#0b0815;
+color:#fff;
+}
+
+header{
+width:100%;
+position:fixed;
+top:0;
+left:0;
+padding:18px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,.75);
+backdrop-filter:blur(12px);
+z-index:1000;
+border-bottom:1px solid rgba(170,0,255,.3);
+}
+
+.logo{
+font-size:28px;
+font-weight:700;
+color:#b84cff;
+text-shadow:0 0 20px #8f00ff;
+}
+
+nav a{
+text-decoration:none;
+color:#fff;
+margin-left:25px;
+font-weight:500;
+transition:.4s;
+}
+
+nav a:hover{
+color:#c45cff;
+}
+
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+background:
+linear-gradient(rgba(10,10,20,.75),rgba(10,10,20,.85)),
+url("https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1500&q=80");
+background-size:cover;
+background-position:center;
+}
+
+.hero-content{
+max-width:850px;
+}
+
+.hero h1{
+font-size:65px;
+margin-bottom:20px;
+color:#fff;
+text-shadow:0 0 25px #a100ff;
+}
+
+.hero p{
+font-size:20px;
+line-height:1.8;
+color:#ddd;
+}
+
+.btn{
+display:inline-block;
+margin-top:35px;
+padding:15px 40px;
+background:linear-gradient(45deg,#6f00ff,#d400ff);
+color:white;
+text-decoration:none;
+border-radius:40px;
+font-weight:bold;
+transition:.4s;
+box-shadow:0 0 25px #8f00ff;
+}
+
+.btn:hover{
+transform:translateY(-5px);
+box-shadow:0 0 40px #d400ff;
+}
+
+.section{
+padding:100px 8%;
+}
+
+.title{
+font-size:42px;
+text-align:center;
+margin-bottom:60px;
+color:#c66dff;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.card{
+background:#151122;
+padding:35px;
+border-radius:20px;
+text-align:center;
+transition:.4s;
+border:1px solid rgba(180,70,255,.25);
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 30px rgba(160,0,255,.6);
+}
+
+.card h3{
+margin-bottom:15px;
+color:#d18aff;
+}
+
+.card p{
+color:#ccc;
+line-height:1.7;
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:25px;
+text-align:center;
+}
+
+.stat{
+background:#181325;
+padding:35px;
+border-radius:18px;
+}
+
+.stat h2{
+font-size:45px;
+color:#bb55ff;
+}
+
+.stat p{
+margin-top:10px;
+color:#ddd;
+}
+
+footer{
+background:#09060f;
+padding:40px;
+text-align:center;
+margin-top:60px;
+border-top:1px solid rgba(170,0,255,.3);
+}
+
+footer p{
+color:#aaa;
+}
+
+@media(max-width:900px){
+
+header{
+flex-direction:column;
+}
+
+nav{
+margin-top:15px;
+}
+
+nav a{
+display:inline-block;
+margin:8px;
+}
+
+.hero h1{
+font-size:40px;
+}
+
+.hero p{
+font-size:17px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">GHS NAIWALA BARNALA</div>
+
+<nav>
+
+<a href="#">Home</a>
+
+<a href="about.html">About</a>
+
+<a href="teachers.html">Teachers</a>
+
+<a href="admission.html">Admission</a>
+
+<a href="facilities.html">Facilities</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>Welcome To Ghs Naiwala Barnala</h1>
+
+<p>
+Creating Bright Minds, Future Leaders and Successful Students with Modern Education,
+Experienced Teachers and Smart Learning Environment.
+</p>
+
+<a href="explore.html" class="btn">Explore School</a>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="title">Why Choose Our School?</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>📚 Smart Classes</h3>
+<p>Modern digital classrooms with interactive learning and smart education.</p>
+</div>
+
+<div class="card">
+<h3>👨‍🏫 Expert Teachers</h3>
+<p>Highly qualified and experienced faculty for every subject.</p>
+</div>
+
+<div class="card">
+<h3>🏆 Best Results</h3>
+<p>Excellent academic performance with sports and cultural achievements.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="title">Our Success</h2>
+
+<div class="stats">
+
+<div class="stat">
+<h2>250+</h2>
+<p>Students</p>
+</div>
+
+<div class="stat">
+<h2>12+</h2>
+<p>Teachers</p>
+</div>
+
+<div class="stat">
+<h2>35+</h2>
+<p>Years Experience</p>
+</div>
+
+<div class="stat">
+<h2>100%</h2>
+<p>Board Results</p>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<h2 style="color:#bb55ff;">Ghs Naiwala Barnala</h2>
+
+<p>
+Excellence In Education | Bright Future | Smart Learning
+</p>
+
+<br>
+
+<p>© 2026 Ghs Naiwla . All Rights Reserved.</p>
+
+</footer>
+
+</body>
+</html>
